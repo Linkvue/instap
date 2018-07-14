@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
 
     create_table :users, id: :uuid do |t|
       t.string :name, index: true
-      t.string :email, index: { unique: true }
       t.string :avatar_path
       t.string :alipay_id
       t.string :tencent_id
