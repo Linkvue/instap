@@ -1,11 +1,10 @@
 class CreateCategories < ActiveRecord::Migration[5.1]
   def change
-    create_table :categories do |t|
-      t.uuid :id
+    create_table :categories, id: :uuid do |t|
       t.string :title
       t.text :details
       t.datetime :blocked_at
-      t.string :blocker_id
+      t.references :blocker, references: :users, index: true
 
       t.timestamps
     end
