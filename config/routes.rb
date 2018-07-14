@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'post#index'
+  root to: 'posts#index'
   resources :histories
   resources :excerpts
   resources :comments
