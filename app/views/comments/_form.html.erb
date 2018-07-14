@@ -1,0 +1,67 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id, id: :comment_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :comment_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_id %>
+    <%= form.text_field :content_id, id: :comment_content_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author_id %>
+    <%= form.text_field :author_id, id: :comment_author_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_id %>
+    <%= form.text_field :post_id, id: :comment_post_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :referer_id %>
+    <%= form.text_field :referer_id, id: :comment_referer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :published_at %>
+    <%= form.datetime_select :published_at, id: :comment_published_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :modified_at %>
+    <%= form.datetime_select :modified_at, id: :comment_modified_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blocked_at %>
+    <%= form.datetime_select :blocked_at, id: :comment_blocked_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blocker_id %>
+    <%= form.text_area :blocker_id, id: :comment_blocker_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

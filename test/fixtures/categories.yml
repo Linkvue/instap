@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  title: MyString
+  details: MyText
+  blocked_at: 2018-07-14 18:06:20
+  blocker_id: MyString
+
+two:
+  id: 
+  title: MyString
+  details: MyText
+  blocked_at: 2018-07-14 18:06:20
+  blocker_id: MyString

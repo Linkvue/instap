@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @comment.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @comment.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @comment.content_id %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @comment.author_id %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @comment.post_id %>
+</p>
+
+<p>
+  <strong>Referer:</strong>
+  <%= @comment.referer_id %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @comment.published_at %>
+</p>
+
+<p>
+  <strong>Modified at:</strong>
+  <%= @comment.modified_at %>
+</p>
+
+<p>
+  <strong>Blocked at:</strong>
+  <%= @comment.blocked_at %>
+</p>
+
+<p>
+  <strong>Blocker:</strong>
+  <%= @comment.blocker_id %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

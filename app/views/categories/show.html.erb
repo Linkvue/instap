@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @category.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @category.title %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @category.details %>
+</p>
+
+<p>
+  <strong>Blocked at:</strong>
+  <%= @category.blocked_at %>
+</p>
+
+<p>
+  <strong>Blocker:</strong>
+  <%= @category.blocker_id %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

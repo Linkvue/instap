@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reader: one
+  post: one
+  lineno: 1
+
+two:
+  reader: two
+  post: two
+  lineno: 1
