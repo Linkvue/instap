@@ -1,0 +1,20 @@
+= form_with(model: excerpt, local: true) do |form|
+  - if excerpt.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(excerpt.errors.count, "error")
+        prohibited this excerpt from being saved:
+      %ul
+        - excerpt.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :reader_id
+    = form.text_field :reader_id, id: :excerpt_reader_id
+  .field
+    = form.label :post_id
+    = form.text_field :post_id, id: :excerpt_post_id
+  .field
+    = form.label :content
+    = form.text_area :content, id: :excerpt_content
+  .actions
+    = form.submit

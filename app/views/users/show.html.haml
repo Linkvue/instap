@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %strong Id:
+  = @user.id
+%p
+  %strong Name:
+  = @user.name
+%p
+  %strong Email:
+  = @user.email
+%p
+  %strong Avatar path:
+  = @user.avatar_path
+%p
+  %strong Alipay:
+  = @user.alipay_id
+%p
+  %strong Tencent:
+  = @user.tencent_id
+%p
+  %strong Blocked at:
+  = @user.blocked_at
+%p
+  %strong Blocker:
+  = @user.blocker_id
+%p
+  %strong Roles:
+  = @user.roles
+= link_to 'Edit', edit_user_path(@user)
+|
+= link_to 'Back', users_path

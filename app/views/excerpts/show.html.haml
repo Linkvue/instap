@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Reader:
+  = @excerpt.reader
+%p
+  %strong Post:
+  = @excerpt.post
+%p
+  %strong Content:
+  = @excerpt.content
+= link_to 'Edit', edit_excerpt_path(@excerpt)
+|
+= link_to 'Back', excerpts_path

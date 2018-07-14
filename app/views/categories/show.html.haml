@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Id:
+  = @category.id
+%p
+  %strong Title:
+  = @category.title
+%p
+  %strong Details:
+  = @category.details
+%p
+  %strong Blocked at:
+  = @category.blocked_at
+%p
+  %strong Blocker:
+  = @category.blocker_id
+= link_to 'Edit', edit_category_path(@category)
+|
+= link_to 'Back', categories_path

@@ -1,0 +1,41 @@
+= form_with(model: post, local: true) do |form|
+  - if post.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(post.errors.count, "error")
+        prohibited this post from being saved:
+      %ul
+        - post.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :id
+    = form.text_field :id, id: :post_id
+  .field
+    = form.label :category_id
+    = form.text_field :category_id, id: :post_category_id
+  .field
+    = form.label :author_id
+    = form.text_field :author_id, id: :post_author_id
+  .field
+    = form.label :title
+    = form.text_field :title, id: :post_title
+  .field
+    = form.label :content
+    = form.text_area :content, id: :post_content
+  .field
+    = form.label :published_at
+    = form.datetime_select :published_at, id: :post_published_at
+  .field
+    = form.label :modified_at
+    = form.datetime_select :modified_at, id: :post_modified_at
+  .field
+    = form.label :blocked_at
+    = form.datetime_select :blocked_at, id: :post_blocked_at
+  .field
+    = form.label :blocker_id
+    = form.text_field :blocker_id, id: :post_blocker_id
+  .field
+    = form.label :tags
+    = form.text_area :tags, id: :post_tags
+  .actions
+    = form.submit

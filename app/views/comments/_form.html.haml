@@ -1,0 +1,41 @@
+= form_with(model: comment, local: true) do |form|
+  - if comment.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(comment.errors.count, "error")
+        prohibited this comment from being saved:
+      %ul
+        - comment.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :id
+    = form.text_field :id, id: :comment_id
+  .field
+    = form.label :title
+    = form.text_field :title, id: :comment_title
+  .field
+    = form.label :content_id
+    = form.text_field :content_id, id: :comment_content_id
+  .field
+    = form.label :author_id
+    = form.text_field :author_id, id: :comment_author_id
+  .field
+    = form.label :post_id
+    = form.text_field :post_id, id: :comment_post_id
+  .field
+    = form.label :referer_id
+    = form.text_field :referer_id, id: :comment_referer_id
+  .field
+    = form.label :published_at
+    = form.datetime_select :published_at, id: :comment_published_at
+  .field
+    = form.label :modified_at
+    = form.datetime_select :modified_at, id: :comment_modified_at
+  .field
+    = form.label :blocked_at
+    = form.datetime_select :blocked_at, id: :comment_blocked_at
+  .field
+    = form.label :blocker_id
+    = form.text_area :blocker_id, id: :comment_blocker_id
+  .actions
+    = form.submit
