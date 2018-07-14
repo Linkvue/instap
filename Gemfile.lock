@@ -1,6 +1,5 @@
 GEM
   remote: https://gems.ruby-china.org/
-  remote: https://rubygems.org/
   specs:
     actioncable (5.1.6)
       actionpack (= 5.1.6)
@@ -201,4 +200,4 @@ DEPENDENCIES
   webpacker
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
