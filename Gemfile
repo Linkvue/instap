@@ -67,3 +67,10 @@ gem 'simple_form'
 gem 'bootstrap'
 
 gem 'haml'
+
+# Use Grape for api.
+gem 'grape'
+gem 'grape-entity'
+# Use Swagger for documentation.
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
