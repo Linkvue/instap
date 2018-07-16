@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180714112355) do
+ActiveRecord::Schema.define(version: 20180716094829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 20180714112355) do
   create_table "comments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
     t.string "content"
-    t.bigint "author_id"
-    t.bigint "post_id"
+    t.uuid "author_id"
+    t.uuid "post_id"
     t.string "referer_type"
-    t.bigint "referer_id"
+    t.uuid "referer_id"
     t.datetime "published_at"
     t.datetime "modified_at"
     t.datetime "blocked_at"
@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(version: 20180714112355) do
   end
 
   create_table "posts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.bigint "category_id"
-    t.bigint "author_id"
+    t.uuid "category_id"
+    t.uuid "author_id"
     t.string "title"
     t.text "content"
     t.datetime "published_at"
