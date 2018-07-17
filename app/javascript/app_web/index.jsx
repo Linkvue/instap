@@ -6,12 +6,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
+// The component that self-created.
+import PostCards from './components/post_cards'
+
 const Hello = props => (
   <div>Hello {props.name}!</div>
 )
 
 Hello.defaultProps = {
-  name: 'David'
+  name: 'Daniel'
 }
 
 Hello.propTypes = {
@@ -20,7 +23,7 @@ Hello.propTypes = {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <PostCards />,
     document.body.appendChild(document.createElement('div')),
   )
 })
