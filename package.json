@@ -5,9 +5,12 @@
     "@rails/webpacker": "^3.5.5",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
+    "immutable": "^3.8.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "slate": "^0.34.5",
+    "slate-react": "^0.13.2",
     "style-loader": "^0.21.0"
   },
   "devDependencies": {
