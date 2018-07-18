@@ -22,7 +22,7 @@
 one:
   id: 
   title: MyString
-  content_id: MyString
+  content: MyString
   author_id: MyString
   post_id: MyString
   referer_id: MyString
@@ -34,7 +34,7 @@ one:
 two:
   id: 
   title: MyString
-  content_id: MyString
+  content: MyString
   author_id: MyString
   post_id: MyString
   referer_id: MyString

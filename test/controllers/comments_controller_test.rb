@@ -17,7 +17,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create comment" do
     assert_difference('Comment.count') do
-      post comments_url, params: { comment: { author_id: @comment.author_id, blocked_at: @comment.blocked_at, blocker_id: @comment.blocker_id, content_id: @comment.content_id, id: @comment.id, modified_at: @comment.modified_at, post_id: @comment.post_id, published_at: @comment.published_at, referer_id: @comment.referer_id, title: @comment.title } }
+      post comments_url, params: { comment: { author_id: @comment.author_id, blocked_at: @comment.blocked_at, blocker_id: @comment.blocker_id, content: @comment.content, id: @comment.id, modified_at: @comment.modified_at, post_id: @comment.post_id, published_at: @comment.published_at, referer_id: @comment.referer_id, title: @comment.title } }
     end
 
     assert_redirected_to comment_url(Comment.last)
@@ -34,7 +34,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update comment" do
-    patch comment_url(@comment), params: { comment: { author_id: @comment.author_id, blocked_at: @comment.blocked_at, blocker_id: @comment.blocker_id, content_id: @comment.content_id, id: @comment.id, modified_at: @comment.modified_at, post_id: @comment.post_id, published_at: @comment.published_at, referer_id: @comment.referer_id, title: @comment.title } }
+    patch comment_url(@comment), params: { comment: { author_id: @comment.author_id, blocked_at: @comment.blocked_at, blocker_id: @comment.blocker_id, content: @comment.content, id: @comment.id, modified_at: @comment.modified_at, post_id: @comment.post_id, published_at: @comment.published_at, referer_id: @comment.referer_id, title: @comment.title } }
     assert_redirected_to comment_url(@comment)
   end
 
