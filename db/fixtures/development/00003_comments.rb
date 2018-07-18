@@ -1,12 +1,13 @@
-Comment.delete_all
-Comment.seed do |s|
-  s.content = Ipsum::SHORT_IPSUM
-  s.post_id = Post.first.id
-  s.author_id = User.first.id
-end
+prev_id = nil
 
-Comment.seed do |s|
-  s.content = Ipsum::SHORT_IPSUM
-  s.post_id = Post.first.id
-  s.author_id = User.first.id
+SEED_COMMENT_IDS.map do |id|
+  Comment.seed(:id) do |s|
+    s.id = id
+    s.referer_id = prev_id if prev_id
+    s.referer_type = 'Comment' if prev_id
+    s.content = Faker::Lorem.sentences
+    s.post_id = Post.first.id
+    s.author_id = User.first.id
+  end
+  prev_id = id
 end

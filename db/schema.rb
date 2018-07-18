@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716094829) do
+ActiveRecord::Schema.define(version: 20180718072302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +64,19 @@ ActiveRecord::Schema.define(version: 20180716094829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["likable_type", "likable_id"], name: "index_favorates_on_likable_type_and_likable_id"
+    t.index ["user_id", "likable_id", "likable_type"], name: "index_favorates_on_user_id_and_likable_id_and_likable_type", unique: true
     t.index ["user_id"], name: "index_favorates_on_user_id"
+  end
+
+  create_table "followships", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "user_id"
+    t.uuid "follower_id"
+    t.datetime "started_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["follower_id"], name: "index_followships_on_follower_id"
+    t.index ["user_id", "follower_id"], name: "index_followships_on_user_id_and_follower_id", unique: true
+    t.index ["user_id"], name: "index_followships_on_user_id"
   end
 
   create_table "histories", force: :cascade do |t|
@@ -74,6 +86,7 @@ ActiveRecord::Schema.define(version: 20180716094829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_histories_on_post_id"
+    t.index ["reader_id", "post_id"], name: "index_histories_on_reader_id_and_post_id", unique: true
     t.index ["reader_id"], name: "index_histories_on_reader_id"
   end
 
@@ -127,6 +140,7 @@ ActiveRecord::Schema.define(version: 20180716094829) do
   add_foreign_key "excerpts", "posts"
   add_foreign_key "excerpts", "users", column: "reader_id"
   add_foreign_key "favorates", "users"
+  add_foreign_key "followships", "users"
   add_foreign_key "histories", "posts"
   add_foreign_key "histories", "users", column: "reader_id"
 end

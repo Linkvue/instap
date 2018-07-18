@@ -77,3 +77,4 @@ gem 'grape-swagger-rails'
 
 # For inserting and maitaining data
 gem 'seed-fu'
+gem 'faker'

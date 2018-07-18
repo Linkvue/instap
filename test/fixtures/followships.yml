@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: followships
+#
+#  id          :uuid             not null, primary key
+#  user_id     :uuid
+#  follower_id :uuid
+#  start_at    :datetime
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  follower: one
+
+two:
+  user: two
+  follower: two
