@@ -1,5 +1,5 @@
 const { environment } = require('@rails/webpacker')
-environment.loader.append('css', {
+environment.loaders.append('css', {
   test: /\.css$/,
   use: [
     {loader: 'style-loader'},
