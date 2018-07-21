@@ -43,4 +43,19 @@ class User < ApplicationRecord
 
   has_many :fans, through: :fanships, source: :follower
   has_many :follows, through: :followships, source: :user
+
+  # validate email/mobile/oauth
+  #validates :mobile, presence: true, uniqueness: true
+
+  ROLES = %w(vip user super)
+
+  before_create :set_default
+
+  def set_default
+    self.roles ||= ['user']
+  end
+
+  ROLES.each do |role|
+    define_method("#{role}?") { self.roles.include?(role) }
+  end
 end

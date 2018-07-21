@@ -1,5 +1,6 @@
 DEFAULT_TIME = DateTime.now
 User.seed(:email) do |s|
+  s.roles = ['super','user']
   s.name = "UserA"
   s.avatar_path = "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=901ab36d4d90f60310bd9415587bd87e/10dfa9ec8a1363277848fd6f968fa0ec09fac7c0.jpg"
   s.alipay_id = "alipay"
@@ -8,6 +9,7 @@ User.seed(:email) do |s|
 end
 
 User.seed(:email) do |s|
+  s.roles = ['user']
   s.name = "UserB"
   s.avatar_path = "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=901ab36d4d90f60310bd9415587bd87e/10dfa9ec8a1363277848fd6f968fa0ec09fac7c0.jpg"
   s.alipay_id = "UserB"
@@ -16,6 +18,7 @@ User.seed(:email) do |s|
 end
 
 User.seed(:email) do |s|
+  s.roles = ['user']
   s.name = "UserC"
   s.avatar_path = "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=901ab36d4d90f60310bd9415587bd87e/10dfa9ec8a1363277848fd6f968fa0ec09fac7c0.jpg"
   s.alipay_id = "UserC"
@@ -24,6 +27,7 @@ User.seed(:email) do |s|
 end
 
 User.seed(:email) do |s|
+  s.roles = ['vip', 'user']
   s.name = "UserD"
   s.avatar_path = "https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=901ab36d4d90f60310bd9415587bd87e/10dfa9ec8a1363277848fd6f968fa0ec09fac7c0.jpg"
   s.alipay_id = "UserD"

@@ -2,10 +2,82 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+
     %title Instap
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-primary
+      .container
+        %a.navbar-brand{:href => "../"} Instap - Tap your inspration
+        %button.navbar-toggler{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
+          %span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          %ul.navbar-nav
+            %li.nav-item.dropdown
+              %a#themes.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "../"}
+                Categories
+                %span.caret
+              .dropdown-menu{"aria-labelledby" => "themes"}
+                .dropdown-divider
+                %a.dropdown-item{:href => "#{categories_path}", "data-turbolinks" => "false"} Categories
+            %li.nav-item
+              %a#themes.nav-link{:href => "/about"}
+                关于我们
+          - if current_user.present?
+            %ul.nav.navbar-nav.ml-auto
+              %li.nav-item.dropdown
+                %a#themes.nav-link.dropdown-toggle{"data-toggle" => "dropdown", :href => "../"}
+                  #{current_user.id}
+                  %span.caret
+                .dropdown-menu{"aria-labelledby" => "themes"}
+                  %a.dropdown-item{:href => "#{edit_user_registration_path}"} 修改密码
+                  - if current_user.super?
+                    .dropdown-divider
+                    %a.dropdown-item{:href => "/sidekiq"} Sidekiq
+              %li.nav-item
+                = link_to('登出', destroy_user_session_path, method: :delete, class: 'nav-link')
+          - else
+            %ul.nav.navbar-nav.ml-auto
+              %li.nav-item
+                %a.nav-link{:href => "#{new_user_registration_path}"} 注册
+              %li.nav-item
+                %a.nav-link{:href => "#{new_user_session_path}"} 登录
+
+    %main
+      .container
+        .alert-title
+          - if notice
+            %div{class: 'alert alert-warning alert-dismissible'}
+              = notice
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+          - if alert
+            %div{class: 'alert alert-danger alert-dismissible'}
+              = alert
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+      = yield
+    %footer#footer
+      .container
+        .row
+          .col-lg-12
+            %ul.list-unstyled
+              %li.float-lg-right
+                %a{:href => "#top"} Back to top
+              %li.float-left
+                %a{:href => "/bbs"} Forum
+              %li.float-left
+                %a{:href => "https://weibo.com/instap"} Weibo
+        .row
+          .col-lg-12
+            %p
+              © 2017 Houselib, Inc.
+              %a{:href => "/about"}
+              %br
+              Instap
+              %a{:href => "http://www.miitbeian.gov.cn", :rel => "nofollow"} 沪ICP备17049973号
+
     -#= javascript_pack_tag 'app_web'

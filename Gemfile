@@ -65,6 +65,7 @@ gem "omniauth-weibo-oauth2"
 gem 'cancancan'
 gem 'simple_form'
 gem 'bootstrap'
+gem 'jquery-rails'
 
 gem 'haml'
 
