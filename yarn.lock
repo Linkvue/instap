@@ -5937,17 +5937,17 @@ slate-react@^0.13.2:
     slate-plain-serializer "^0.5.20"
     slate-prop-types "^0.4.37"
 
-slate-schema-violations@^0.1.18:
-  version "0.1.18"
-  resolved "http://registry.npm.taobao.org/slate-schema-violations/download/slate-schema-violations-0.1.18.tgz#bc760e17dab85a613cd9a5399b98cbf867db0eb7"
+slate-schema-violations@^0.1.20:
+  version "0.1.20"
+  resolved "http://registry.npm.taobao.org/slate-schema-violations/download/slate-schema-violations-0.1.20.tgz#bf63b4fb295b90f4218939564adafcd1c2f21759"
 
 slate-soft-break@^0.6.1:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/slate-soft-break/download/slate-soft-break-0.6.1.tgz#b5e9ccf3cb876168c10266428274e2523b0d3dd9"
 
-slate@^0.34.5:
-  version "0.34.5"
-  resolved "http://registry.npm.taobao.org/slate/download/slate-0.34.5.tgz#4bc30dc300c924193d42371a7afcc168676f2798"
+slate@^0.34.7:
+  version "0.34.7"
+  resolved "http://registry.npm.taobao.org/slate/download/slate-0.34.7.tgz#5908e1d0fc092a2212488beca65671f01e0eb80a"
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"
@@ -5956,7 +5956,7 @@ slate@^0.34.5:
     is-plain-object "^2.0.4"
     lodash "^4.17.4"
     slate-dev-logger "^0.1.39"
-    slate-schema-violations "^0.1.18"
+    slate-schema-violations "^0.1.20"
     type-of "^2.0.1"
 
 snapdragon-node@^2.0.1:
