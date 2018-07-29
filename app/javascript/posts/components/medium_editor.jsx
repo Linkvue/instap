@@ -1,22 +1,15 @@
-/*
 import React from 'react';
-import ReactDOM from 'react-dom';
-import InstapEditor from './components/instap_editor';
-import Editor from './components/medium_editor';
-
-const root = document.querySelector('#root');
-ReactDOM.render(
-  <Editor />,
-  root
-)
-*/
 
 import MediumEditor from 'medium-editor';
 
-import css from './styles/index.css'
+class Editor extends React.Component {
 
-var editor = new MediumEditor('.editable', {
-    toolbar: {
+
+  comonentDidMount() {
+    var editor = new MediumEditor('#root', {
+      toolbar: {
+        /* These are the default options for the toolbar,
+           if nothing is passed this is what is used */
         allowMultiParagraphSelection: true,
         buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote'],
         diffLeft: 0,
@@ -30,5 +23,14 @@ var editor = new MediumEditor('.editable', {
         align: 'center',
         sticky: false,
         updateOnEmptySelection: false
-    }
-});
+      }
+    });
+  }
+
+  render() {
+    <div />
+  }
+
+}
+
+export default Editor;
