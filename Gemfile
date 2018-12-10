@@ -1,4 +1,4 @@
-source 'https://gems.ruby-china.org'
+source 'https://gems.ruby-china.com'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -65,7 +65,6 @@ gem "omniauth-weibo-oauth2"
 gem 'cancancan'
 gem 'simple_form'
 gem 'bootstrap'
-gem 'jquery-rails'
 
 gem 'haml'
 
