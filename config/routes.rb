@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     get 'index'
   end
 
-  mount GrapeSwaggerRails::Engine => '/docs'
+  mount ::API::Root => '/api'
+  mount GrapeSwaggerRails::Engine => '/api_doc'
+  
 
 end

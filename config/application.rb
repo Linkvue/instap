@@ -18,5 +18,10 @@ module Instap
       g.orm :active_record, primary_key_type: :uuid
       g.orm :active_record, foreign_key_type: :uuid
     end
+
+    # Integrad grape 
+    config.eager_load_paths << "#{Rails.root}/app"
+    #config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
+    #config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
   end
 end
