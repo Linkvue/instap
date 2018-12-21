@@ -21,11 +21,87 @@
   version "11.2.0"
   resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-build-classic/download/@ckeditor/ckeditor5-build-classic-11.2.0.tgz#205ae1bd5495b2a7c9f5a4fef5241aca4118229a"
 
+"@ckeditor/ckeditor5-core@^11.1.0":
+  version "11.1.0"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-core/download/@ckeditor/ckeditor5-core-11.1.0.tgz#e2ff1e399a0024a2343c750f2796606196167f1a"
+  integrity sha1-4v8eOZoAJKI0PHUPJ5ZgYZYWfxo=
+  dependencies:
+    "@ckeditor/ckeditor5-engine" "^12.0.0"
+    "@ckeditor/ckeditor5-utils" "^11.1.0"
+    lodash-es "^4.17.10"
+
+"@ckeditor/ckeditor5-engine@^12.0.0":
+  version "12.0.0"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-engine/download/@ckeditor/ckeditor5-engine-12.0.0.tgz#89f6adeb36ad21841166af542ba2bb940e065307"
+  integrity sha1-ifat6zatIYQRZq9UK6K7lA4GUwc=
+  dependencies:
+    "@ckeditor/ckeditor5-utils" "^11.1.0"
+    lodash-es "^4.17.10"
+
+"@ckeditor/ckeditor5-image@^12.0.0":
+  version "12.0.0"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-image/download/@ckeditor/ckeditor5-image-12.0.0.tgz#479511a21961afd60d4fa6344c14fa1161b986d4"
+  integrity sha1-R5URohlhr9YNT6Y0TBT6EWG5htQ=
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^11.1.0"
+    "@ckeditor/ckeditor5-engine" "^12.0.0"
+    "@ckeditor/ckeditor5-theme-lark" "^12.0.0"
+    "@ckeditor/ckeditor5-ui" "^11.2.0"
+    "@ckeditor/ckeditor5-upload" "^10.0.4"
+    "@ckeditor/ckeditor5-utils" "^11.1.0"
+    "@ckeditor/ckeditor5-widget" "^10.3.1"
+
 "@ckeditor/ckeditor5-react@^1.1.0":
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-react/download/@ckeditor/ckeditor5-react-1.1.0.tgz#d0b0049754bea4b5dec0d2748306559f8b1a5ad4"
   dependencies:
     prop-types "^15.6.1"
+
+"@ckeditor/ckeditor5-theme-lark@^12.0.0":
+  version "12.0.0"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-theme-lark/download/@ckeditor/ckeditor5-theme-lark-12.0.0.tgz#db87a8f0215f374b4e50d07c8b4ad88352ddd4ec"
+  integrity sha1-24eo8CFfN0tOUNB8i0rYg1Ld1Ow=
+  dependencies:
+    "@ckeditor/ckeditor5-ui" "^11.2.0"
+
+"@ckeditor/ckeditor5-ui@^11.2.0":
+  version "11.2.0"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-ui/download/@ckeditor/ckeditor5-ui-11.2.0.tgz#c8de7b4b1f1f9b256b3e298f161acdb5ef168b54"
+  integrity sha1-yN57Sx8fmyVrPimPFhrNte8Wi1Q=
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^11.1.0"
+    "@ckeditor/ckeditor5-theme-lark" "^12.0.0"
+    "@ckeditor/ckeditor5-utils" "^11.1.0"
+    lodash-es "^4.17.10"
+
+"@ckeditor/ckeditor5-upload@^10.0.4":
+  version "10.0.4"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-upload/download/@ckeditor/ckeditor5-upload-10.0.4.tgz#4c7ad0ad705b434eef7156f80db33f82621e74a6"
+  integrity sha1-THrQrXBbQ07vcVb4DbM/gmIedKY=
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^11.1.0"
+    "@ckeditor/ckeditor5-engine" "^12.0.0"
+    "@ckeditor/ckeditor5-ui" "^11.2.0"
+    "@ckeditor/ckeditor5-utils" "^11.1.0"
+
+"@ckeditor/ckeditor5-utils@^11.1.0":
+  version "11.1.0"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-utils/download/@ckeditor/ckeditor5-utils-11.1.0.tgz#53535004ca9e2074fc0776b60a1706aa8af9a180"
+  integrity sha1-U1NQBMqeIHT8B3a2ChcGqor5oYA=
+  dependencies:
+    ckeditor5 "^11.2.0"
+    lodash-es "^4.17.10"
+
+"@ckeditor/ckeditor5-widget@^10.3.1":
+  version "10.3.1"
+  resolved "http://registry.npm.taobao.org/@ckeditor/ckeditor5-widget/download/@ckeditor/ckeditor5-widget-10.3.1.tgz#ea8aa94db66af1d4c2667ce4f3ddd6e588fe1f69"
+  integrity sha1-6oqpTbZq8dTCZnzk893W5Yj+H2k=
+  dependencies:
+    "@ckeditor/ckeditor5-core" "^11.1.0"
+    "@ckeditor/ckeditor5-engine" "^12.0.0"
+    "@ckeditor/ckeditor5-theme-lark" "^12.0.0"
+    "@ckeditor/ckeditor5-ui" "^11.2.0"
+    "@ckeditor/ckeditor5-utils" "^11.1.0"
 
 "@emotion/babel-utils@^0.6.4":
   version "0.6.7"
@@ -1352,6 +1428,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+ckeditor5@^11.2.0:
+  version "11.2.0"
+  resolved "http://registry.npm.taobao.org/ckeditor5/download/ckeditor5-11.2.0.tgz#480c6d65475b73772681877114da859c1c2b5cba"
+  integrity sha1-SAxtZUdbc3cmgYdxFNqFnBwrXLo=
 
 clap@^1.0.9:
   version "1.2.3"
@@ -3656,6 +3737,11 @@ locate-path@^2.0.0:
   dependencies:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
+
+lodash-es@^4.17.10:
+  version "4.17.11"
+  resolved "http://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.11.tgz#145ab4a7ac5c5e52a3531fb4f310255a152b4be0"
+  integrity sha1-FFq0p6xcXlKjUx+08xAlWhUrS+A=
 
 lodash._reinterpolate@~3.0.0:
   version "3.0.0"

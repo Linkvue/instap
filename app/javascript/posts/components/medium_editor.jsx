@@ -28,7 +28,7 @@ class Editor extends React.Component {
   }
 
   render() {
-    <div />
+    return (<div />)
   }
 
 }
