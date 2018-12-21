@@ -1,17 +1,19 @@
 import React from 'react';
 
 import MediumEditor from 'medium-editor';
+import 'medium-editor/dist/css/medium-editor.min.css';
+import 'medium-editor/dist/css/themes/default.css';
+
 
 class Editor extends React.Component {
 
-
-  comonentDidMount() {
-    var editor = new MediumEditor('#root', {
+  componentDidMount() {
+    var editor = new MediumEditor('.editable', {
       toolbar: {
         /* These are the default options for the toolbar,
            if nothing is passed this is what is used */
         allowMultiParagraphSelection: true,
-        buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote'],
+        buttons: ['bold', 'italic', 'underline', 'anchor', 'h1', 'h2', 'h3', 'quote'],
         diffLeft: 0,
         diffTop: -10,
         firstButtonClass: 'medium-editor-button-first',
@@ -25,10 +27,17 @@ class Editor extends React.Component {
         updateOnEmptySelection: false
       }
     });
+
+    editor.subscribe('editableInput', function (event, editable) {
+      // When inputType is any event save post.
+      console.log(event);
+    });
+
+
   }
 
   render() {
-    return (<div />)
+    return (<div>dfsfsfddfsfds</div>)
   }
 
 }
