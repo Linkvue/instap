@@ -76,6 +76,8 @@ gem 'grape-entity'
 # Use Swagger for documentation.
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
+gem 'grape-swagger-entity'
+gem 'grape-swagger-representable'
 
 # For inserting and maitaining data
 gem 'seed-fu'

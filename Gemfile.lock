@@ -87,6 +87,8 @@ GEM
     concurrent-ruby (1.1.3)
     crass (1.0.4)
     debug_inspector (0.0.3)
+    declarative (0.0.10)
+    declarative-option (0.1.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (4.5.0)
@@ -120,8 +122,14 @@ GEM
       multi_json (>= 1.3.2)
     grape-swagger (0.32.1)
       grape (>= 0.16.2)
+    grape-swagger-entity (0.3.1)
+      grape-entity (>= 0.5.0)
+      grape-swagger (>= 0.31.0)
     grape-swagger-rails (0.3.0)
       railties (>= 3.2.12)
+    grape-swagger-representable (0.2.2)
+      grape-swagger (>= 0.31.0)
+      representable
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -221,6 +229,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    representable (3.0.4)
+      declarative (< 0.1.0)
+      declarative-option (< 0.2.0)
+      uber (< 0.2.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -270,6 +282,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uber (0.1.0)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
     virtus (1.0.5)
@@ -312,7 +325,9 @@ DEPENDENCIES
   grape
   grape-entity
   grape-swagger
+  grape-swagger-entity
   grape-swagger-rails
+  grape-swagger-representable
   haml
   jbuilder (~> 2.5)
   jquery-rails
