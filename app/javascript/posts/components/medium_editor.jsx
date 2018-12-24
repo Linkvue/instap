@@ -8,6 +8,8 @@ import 'medium-editor/dist/css/themes/default.css';
 class Editor extends React.Component {
 
   componentDidMount() {
+    let post = this.fetchPost("2ebc9ed9-8ce4-4ed2-87e6-7044ae3ae2b5");
+    console.log(post)
     var editor = new MediumEditor('.editable', {
       toolbar: {
         /* These are the default options for the toolbar,
@@ -32,7 +34,6 @@ class Editor extends React.Component {
       // When inputType is any event save post.
       console.log(event);
     });
-
 
   }
 
